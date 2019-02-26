@@ -44,5 +44,6 @@ app = web.Application([
 ])
 
 if __name__ == '__main__':
-    app.listen(8888)
+    port = int(os.environ.get("PORT", 8888))
+    app.listen(port)
     ioloop.IOLoop.instance().start()
